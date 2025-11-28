@@ -336,7 +336,7 @@ public class BinarySearcher(Il2CppBinary binary, int methodCount, int typeDefini
                     if (i % 2 == 0)
                     {
                         //Count
-                        ok = mrWords[i] < 0xC_0000;
+                        ok = mrWords[i] < 0xE_0000;
 
                         if (!ok)
                             LibLogger.VerboseNewline($"\t\t\tRejected Metadata registration at 0x{va:X}, because it has a count field 0x{mrWords[i]:X} at offset {i} which is above sanity limit of 0xC0000. If metadata registration detection fails, may need to bump up the limit.");
